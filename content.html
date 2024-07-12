@@ -1,0 +1,23 @@
+//1a
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    Enter text here: <input type="text" id="inText" required/><br/>
+    <button onclick="sbtBtn()">Translate</button><br />
+    <div id="result"></div>
+    <script>
+        function sbtBtn() {
+            let text = document.getElementById("inText").value;
+            let vowels = "aeiou";
+            let result = "";
+            for (let char of text) {
+                result += vowels.includes(char) || char === " " ? char : char + "o" + char;
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+</html>
